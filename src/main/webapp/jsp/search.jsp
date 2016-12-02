@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Index Page</title>
+        <title>Search Page</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
         
@@ -31,7 +31,9 @@
                     <%@include file="dvdTableFragment.jsp" %>
                 </div>
                 <div class="col-md-6">
+                    <center>
                     <h3>Search DVDs</h3>
+                    </center>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <label for="search-title" class="col-md-4 control-label">Title:</label>
@@ -70,7 +72,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-8">
+                            <div class="col-md-offset-4 col-md-8">
                                 <button type="submit" id="search-button" class="btn btn-default">Search DVD</button>
                             </div>
                         </div>
@@ -84,7 +86,7 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="${pageContext.request.contextPath}/js/jquery-2.2.4.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/DVDCollection.js"></script>
+        <script src="${pageContext.request.contextPath}/js/dvdCollection.js"></script>
 
     </body>
 </html>

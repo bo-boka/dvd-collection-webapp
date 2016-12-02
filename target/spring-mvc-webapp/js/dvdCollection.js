@@ -8,6 +8,11 @@ $(document).ready(function(){
     
     loadDVDs();
     
+    $("#search-button").click(function(event){
+        event.preventDefault();
+        searchDVDs();
+    });
+    
     $("#add-button").click(function(event){
         event.preventDefault();
         addDVD();
@@ -209,5 +214,34 @@ function deleteDVD(id){
         url: 'dvd/' + id
     }).success(function(){
         loadDVDs();
+    });
+}
+
+function searchDVDs() {
+    var dvdTit = $("#search-title").val();
+    var dvdRD = $("#search-release-date").val();
+    var dvdMpaa = $("#search-mpaa-rating").val();
+    var dvdDir = $("#search-director").val();
+    var dvdSt = $("#search-studio").val();
+    var dvdUN = $("#search-user-note").val();
+    
+    $.ajax({
+        url : 'search/dvds',
+        type : 'POST',
+        headers: {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json'
+        },
+        'data-Type' : 'json',
+        data : JSON.stringify({
+            dvdTitle : dvdTit,
+            dvdReleaseDate : dvdRD,
+            dvdMpaaRating : dvdMpaa,
+            dvdDirector : dvdDir,
+            dvdStudio : dvdSt,
+            dvdUserNote : dvdUN
+        })
+    }).success(function(data){
+        processDVDList(data);
     });
 }

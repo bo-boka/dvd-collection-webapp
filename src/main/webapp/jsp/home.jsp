@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Home Page</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,6 +31,9 @@
                     <%@include file="dvdTableFragment.jsp" %>
                 </div>
                 <div class="col-md-6">
+                    <center>
+                    <h2>Add DVD to Collection</h2>
+                    </center>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <label for="add-title" class="col-md-4 control-label">Title:</label>
@@ -69,7 +72,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-8">
+                            <div class="col-md-offset-4 col-md-8">
                                 <button type="submit" id="add-button" class="btn btn-default">Add DVD</button>
                             </div>
                         </div>
