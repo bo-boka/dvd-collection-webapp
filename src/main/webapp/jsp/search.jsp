@@ -8,14 +8,16 @@
         <title>Search Page</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
-        
+        <link href="${pageContext.request.contextPath}/css/dvdlib-style.css" rel="stylesheet">
         <!-- SWC Icon -->
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon.png">
 
     </head>
     <body>
         <div class="container">
-            <h1>DVD Collection</h1>
+            <center><br>
+                <h1>DVD Collection Web App</h1>
+            </center><br>
             <hr/>
             <div class="navbar">
                 <ul class="nav nav-tabs">
@@ -27,12 +29,12 @@
             <div class="row">
                 <!--  display table-->
                 <div class="col-md-6">
-                    <h3>DVD List</h3>
+                    <h2>DVD List</h2>
                     <%@include file="dvdTableFragment.jsp" %>
                 </div>
                 <div class="col-md-6">
                     <center>
-                    <h3>Search DVDs</h3>
+                    <h2>Search DVDs</h2>
                     </center>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
