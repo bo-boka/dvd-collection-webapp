@@ -20,6 +20,7 @@
         <constructor-arg value="${DATABASE_URL}"/>
     </bean>
     
+    
 <!--    <bean id="dataSourceBean" class="org.apache.commons.dbcp2.BasicDataSource">
         describes what kind of db your connecting to
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -43,12 +44,12 @@
         <property name="dataSource" ref="dataSource" />
     </bean> 
     
-    <bean id="jdbcTemplateBean" class="org.springframework.jdbc.core.JdbcTemplate">
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"  />
     </bean>
     
     <bean id="jdbcDao" class="com.tsguild.dvdcollectionwebapp.dao.DVDCollectionDaoJdbcImpl">
-        <property name="jdbcTemplate" ref="jdbcTemplateBean"  />
+        <property name="jdbcTemplate" ref="jdbcTemplate"  />
     </bean>
     
 </beans>
