@@ -19,12 +19,9 @@
     <!--in memory dao-->
     <bean class="com.tsguild.dvdcollectionwebapp.dao.DVDCollectionDaoImpl" id="dvdDao">
     </bean>
+   
     
-<!--    <bean class="com.tsguild.dvdcollectionwebapp.controllers.HomeController" id="controller">
-        <constructor-arg ref="dvdDao"/> if you're injecting via the constructor give it the name of the bean to inject
-    </bean>-->
-    
-    <!--for Postgres database on heroku-->
+    <!--for Postgres database on heroku !!! NEED TO ALTER DAO FOR POSTGRES-->
 <!--    <bean class="java.net.URI" id="dbUrl">
         <constructor-arg value="${DATABASE_URL}"/>
     </bean>
